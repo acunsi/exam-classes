@@ -1,0 +1,154 @@
+{
+  "tests": [
+    {
+      "name": "Verify Main.java has not been altered",
+      "setup": "",
+      "run": "sha256sum Exam1/src/Main.java",
+      "input": "",
+      "output": "86d8be63a8c210cfc5ee39eff268699b85d856ca6ff7f6f4e9e35f91f4dcfc97",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Verify Package Education Exists",
+      "setup": "",
+      "run": "ls Exam1/src",
+      "input": "",
+      "output": "Education",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Verify Student class is in package Education",
+      "setup": "",
+      "run": "ls Exam1/src/Education",
+      "input": "",
+      "output": "Student.java",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Verify Classroom class is in package Education",
+      "setup": "",
+      "run": "ls Exam1/src/Education",
+      "input": "",
+      "output": "Classroom.java",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Verify School class is in package Education",
+      "setup": "",
+      "run": "ls Exam1/src/Education",
+      "input": "",
+      "output": "School.java",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Verify Student class can initialize as expected.",
+      "setup": "cd Exam1/src; javac CoolMath/*.java; javac *.java; pwd;",
+      "run": "cd Exam1/src; java Main 150 4",
+      "input": "",
+      "output": "Student Initialized\r\nTest Output Student Nate\r\nTest Output Student 10\r\n",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Verify Classroom class can initialize as expected",
+      "setup": "cd Exam1/src; javac Main.java",
+      "run": "cd Exam1/src; java Main 150 5",
+      "input": "",
+      "output": "Classroom Initialized\r\nTest Output Classroom 200\r\nTest Output Classroom sandy\r\nTest Output Classroom 10\r\n",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Verify School class can initialize as expected",
+      "setup": "cd Exam1/src; javac Main.java",
+      "run": "cd Exam1/src; java Main 150 6",
+      "input": "",
+      "output": "School Initialized\r\nTest Output School Russell Institute For Higher Learning\r\nTest Output School Nathan Russell\r\n",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Verify all required methods are present for Student",
+      "setup": "cd Exam1/src; javac Main.java",
+      "run": "cd Exam1/src; java Main 150 3",
+      "input": "",
+      "output": "All required methods for Student Class were found.",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Verify all required methods are present for Classroom",
+      "setup": "cd Exam1/src; javac Main.java",
+      "run": "cd Exam1/src; java Main 150 2",
+      "input": "",
+      "output": "All required methods for Classroom Class were found.",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Verify all required methods are present for School",
+      "setup": "cd Exam1/src; javac Main.java",
+      "run": "cd Exam1/src; java Main 150 1",
+      "input": "",
+      "output": "All required methods for School Class were found.",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Verify Program Compiles",
+      "setup": "",
+      "run": "cd Exam1/src; javac Main.java",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Verify program generates appropriate output with default seed 150",
+      "setup": "cd Exam1/src; javac Main.java",
+      "run": "cd Exam1/src; java Main 150 0 > output.txt; sha256sum output.txt",
+      "input": "",
+      "output": "dcaa9dae78376f1bcab43ab3ba404f228fb7e5d17c6fc4c9afd4984f79deaa84",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Verify program output against seed 200",
+      "setup": "cd Exam1/src; javac Main.java",
+      "run": "cd Exam1/src; java Main 200 0 > output.txt; sha256sum output.txt",
+      "input": "",
+      "output": "a13885327ea14728756b5d881cb117a61a585dccd6f08ca0ac9d3911162283a1",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Verify program output against secret seed",
+      "setup": "cd Exam1/src; javac Main.java",
+      "run": "cd Exam1/src; java Main 3004 0 > output.txt; sha256sum output.txt",
+      "input": "",
+      "output": "c9df97baca174d856019c6621bd6e0d11030c8306df747af0c67038a624b3eb8",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}

@@ -8,6 +8,8 @@ public class Classroom {
     Classroom(int roomNum, String teacherName, int numOfStudents){
         System.out.println("Classroom Initialized");
         this.roster = new Student[numOfStudents];
+        this.teacherName = teacherName;
+        this.roomNum = roomNum;
     }
 
     public void setStudentInformation(int studentIndex, int studentID, String studentName){
@@ -15,7 +17,7 @@ public class Classroom {
     }
 
     public int getNumberOfStudents(){
-        return roster.length;
+        return this.roster.length;
     }
 
     public String getTeacherName(){

@@ -22,11 +22,11 @@ public class School {
     }
 
     public void initializeClassroom(int classRoomIndex, int roomNum, String teacherName, int numOfStudents){
-        this.classRoomArray[classRoomIndex] = Classroom(teacherName, roomNum, numOfStudents);
+        this.classRoomArray[classRoomIndex] = new Classroom(roomNum, teacherName, numOfStudents);
     }
 
     public void setStudentInformation(int classRoomIndex, int studentIndex, int studentID, String studentName){
-        this.classRoomArray[classRoomIndex].setStudentInformation(studentName, studentID);
+        this.classRoomArray[classRoomIndex].setStudentInformation(studentIndex, studentID, studentName);
     }
 
     public int getNumberOfClassrooms(){
@@ -57,7 +57,7 @@ public class School {
         return this.schoolName;
     }
 
-    public getRoomNumber(int classRoomIndex){
+    public int getRoomNumber(int classRoomIndex){
         return this.classRoomArray[classRoomIndex].getRoomNumber();
     }
 

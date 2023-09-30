@@ -5,7 +5,7 @@ public class School {
     private String principalName;
     private Classroom[] classRoomArray;
 
-    School(){
+    public School(){
         System.out.println("School Initialized");
     }
 
@@ -30,7 +30,7 @@ public class School {
     }
 
     public int getNumberOfClassrooms(){
-        return this.classRoomArray.length;
+        return this.classRoomArray.length + 1;
     }
 
     public String getPrincipalName(){
@@ -58,7 +58,7 @@ public class School {
     }
 
     public int getRoomNumber(int classRoomIndex){
-        return this.classRoomArray[classRoomIndex].getRoomNumber();
+        return this.classRoomArray[classRoomIndex].getRoomNum();
     }
 
 

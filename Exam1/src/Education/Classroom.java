@@ -1,15 +1,15 @@
 package Education;
 
 public class Classroom {
-    private String teacherName;
-    private int roomNum;
-    private Student[] roster;
+    private final String teacherName;
+    private final int roomNum;
+    private final Student[] roster;
 
-    Classroom(int roomNum, String teacherName, int numOfStudents){
-        System.out.println("Classroom Initialized");
+    public Classroom(int roomNum, String teacherName, int numOfStudents){
         this.roster = new Student[numOfStudents];
         this.teacherName = teacherName;
         this.roomNum = roomNum;
+        System.out.println("Classroom Initialized");
     }
 
     public void setStudentInformation(int studentIndex, int studentID, String studentName){
@@ -17,7 +17,7 @@ public class Classroom {
     }
 
     public int getNumberOfStudents(){
-        return this.roster.length;
+        return this.roster.length + 1;
     }
 
     public String getTeacherName(){
@@ -32,7 +32,7 @@ public class Classroom {
         return this.roster[studentIndex].getStudentID();
     }
 
-    public int getRoomNumber(){
+    public int getRoomNum(){
         return this.roomNum;
     }
 }

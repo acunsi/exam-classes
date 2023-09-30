@@ -1,8 +1,8 @@
 package Education;
 
 public class Student {
-    private final String studentName;
-    private final int studentID;
+    private String studentName;
+    private int studentID;
 
     public Student(String _studentName, int StudentID){
         this.studentName = _studentName;

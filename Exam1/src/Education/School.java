@@ -30,7 +30,7 @@ public class School {
     }
 
     public int getNumberOfClassrooms(){
-        return this.classRoomArray.length + 1;
+        return this.classRoomArray.length;
     }
 
     public String getPrincipalName(){

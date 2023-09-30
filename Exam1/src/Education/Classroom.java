@@ -1,9 +1,9 @@
 package Education;
 
 public class Classroom {
-    private final String teacherName;
-    private final int roomNum;
-    private final Student[] roster;
+    private String teacherName;
+    private int roomNum;
+    private Student[] roster;
 
     public Classroom(int roomNum, String teacherName, int numOfStudents){
         this.roster = new Student[numOfStudents];
@@ -17,7 +17,7 @@ public class Classroom {
     }
 
     public int getNumberOfStudents(){
-        return this.roster.length + 1;
+        return this.roster.length;
     }
 
     public String getTeacherName(){
